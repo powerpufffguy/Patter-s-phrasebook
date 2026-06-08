@@ -103,7 +103,37 @@
    Keep ~15-20 in "rotation". Move old ones to "mastered" after class.
    ========================================================================= */
 const STUDENT_NAME = "Patter";
-const PHRASES = [];
+const PHRASES = [
+  {phrase:"federation", meaning:"A group of states or organizations joined together under one central authority.", example:"The rebel worlds finally united to form a single federation.", source:"Leviathan (pp.160–170)", status:"rotation"},
+  {phrase:"premise", meaning:"The basic idea or assumption a story or argument is built on.", example:"The whole premise of the book is that machines and beasts go to war.", source:"Leviathan (pp.160–170)", status:"rotation"},
+  {phrase:"disassembling", meaning:"Taking something apart piece by piece (opposite of assembling).", example:"The engineers spent hours disassembling the broken engine.", source:"Leviathan (pp.160–170)", status:"rotation"},
+  {phrase:"betrays", meaning:"Acts disloyally against someone — or accidentally reveals a hidden feeling.", example:"Her shaking voice betrays how nervous she really is.", source:"Leviathan (pp.160–170)", status:"rotation"},
+  {phrase:"abyss", meaning:"A deep, seemingly bottomless hole or void; often used for something frightening.", example:"They stared down into the dark abyss below the ship.", source:"Leviathan (pp.160–170)", status:"rotation"},
+  {phrase:"instead", meaning:"In place of something else.", example:"He didn't run; instead, he stood and fought.", source:"Leviathan (pp.160–170)", status:"rotation"},
+  {phrase:"vast", meaning:"Extremely large in size or amount.", example:"A vast ocean stretched out in every direction.", source:"Leviathan (pp.160–170)", status:"rotation"},
+  {phrase:"controversy", meaning:"Public disagreement or heated debate about something.", example:"The new rule caused a huge controversy among the students.", source:"Elevate", status:"rotation"},
+  {phrase:"grotesque", meaning:"Strange and ugly in a disturbing, exaggerated way.", example:"The monster had a grotesque, twisted face.", source:"Elevate", status:"rotation"},
+  {phrase:"cowards", meaning:"People who lack courage and run from danger.", example:"Cowards — they ran off the moment the fighting started.", source:"Leviathan", status:"rotation"},
+  {phrase:"this instant", meaning:"Right now; immediately, with no delay.", example:"If we don't get our ship repaired this instant, we won't even be able to leave.", source:"Leviathan", status:"rotation"},
+  {phrase:"hypocrisy", meaning:"Pretending to have beliefs or standards you don't actually follow.", example:"It's pure hypocrisy to demand honesty while telling lies yourself.", source:"Leviathan", status:"rotation"},
+  {phrase:"wrecked", meaning:"Destroyed or ruined (a ship, a car). Informally it can also mean exhausted or very upset.", example:"And I swear to God, she was wrecked.", source:"La La Land", status:"rotation"},
+  {phrase:"insanity", meaning:"Madness; something wild, foolish, or completely irrational.", example:"It was pure insanity.", source:"La La Land", status:"rotation"},
+  {phrase:"achromatopsia", meaning:"Total colour blindness — seeing the world only in shades of grey.", example:"Did you test for achromatopsia?", source:"La La Land", status:"rotation"},
+  {phrase:"according to", meaning:"As stated or shown by (used to say where information comes from).", example:"According to Dr. Folid's calculations, the great explosion is coming soon.", source:"Leviathan", status:"rotation"},
+  {phrase:"thrilled", meaning:"Very excited and pleased about something. (Careful: prey = the hunted animal, not pray = to worship.)", example:"I'm thrilled to be in this hunt with so many prey.", source:"Leviathan", status:"rotation"},
+  {phrase:"wander", meaning:"To move around slowly with no clear destination or purpose.", example:"They will wander the sea and eventually starve to death.", source:"Leviathan", status:"rotation"},
+  {phrase:"troops", meaning:"Soldiers, especially as a group.", example:"All troops, get ready for battle — we're landing on that island.", source:"Leviathan", status:"rotation"},
+  {phrase:"artificial", meaning:"Made by people; not natural.", example:"They are artificial structures, not real islands.", source:"Leviathan", status:"rotation"},
+  {phrase:"buoy", meaning:"A floating object anchored in water as a marker or warning (said 'BOO-ee').", example:"It's a buoy from New York that was lost in the storm.", source:"Leviathan", status:"rotation"},
+  {phrase:"exterminate", meaning:"To destroy or kill completely.", example:"We're harpoonists from around the world, gathered to exterminate the leviathan.", source:"Leviathan", status:"rotation"},
+  {phrase:"opportunity", meaning:"A good chance to do something.", example:"This is the perfect opportunity to lure the kraken and hunt it down.", source:"Leviathan", status:"rotation"},
+  {phrase:"penetration", meaning:"The act of entering or passing through something, often by force.", example:"The harpoon's penetration was deep enough to wound the beast.", source:"Leviathan", status:"rotation"},
+  {phrase:"bait", meaning:"Food or a lure used to attract and trap an animal.", example:"I think we have the perfect bait.", source:"Leviathan", status:"rotation"},
+  {phrase:"stingy", meaning:"Unwilling to give or spend; mean with money or resources. (Thai: ขี้เหนียว)", example:"Let's not be stingy with the food.", source:"Leviathan", status:"rotation"},
+  {phrase:"grave", meaning:"A place where a dead body is buried; figuratively, one's end or downfall. (Idiom: 'dig your own grave' = cause your own ruin.)", example:"I can't believe Union Busan came to its own grave.", source:"Leviathan", status:"rotation"},
+  {phrase:"ingredient", meaning:"One of the things used to make a dish or mixture; also a part of something bigger.", example:"What a good ingredient that would make.", source:"Leviathan", status:"rotation"},
+  {phrase:"unpredictable", meaning:"Changing in ways you can't expect or guess in advance.", example:"Humans are unpredictable, which makes them interesting.", source:"Leviathan", status:"rotation"},
+];
 
 /* ---------------- app ---------------- */
 let mode="coll", queue=[], idx=0, revealed=false, sessionMastered=0;
